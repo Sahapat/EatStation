@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/actionbarsize"
+    android:background="@drawable/bg_actionbar">
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+        android:id="@+id/btn_profile"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@drawable/selector_btn_actionbar"
+        android:src="@drawable/ic_profile" />
+    <com.inspiretail.anint.eatstation.TextView_rsu_font
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Restuarant"
+        app:font_style="bold"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        />
+    <!--<com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:id="@+id/img_eatstation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_eatstation" />-->
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+        android:id="@+id/btn_search"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@drawable/selector_btn_actionbar"
+        android:src="@drawable/ic_search" />
+
+    <SearchView
+        android:id="@+id/actionbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:queryHint="@string/searchview_hint"
+        android:visibility="invisible" />
+</FrameLayout>
