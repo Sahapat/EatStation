@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EatStation</string>
+    <string name="searchview_hint">Search</string>
+</resources>
