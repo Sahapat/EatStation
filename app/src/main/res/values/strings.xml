@@ -47,5 +47,7 @@
     <string name="none"> </string>
     <string name="forgot_email_text">koy1s@gmail.com</string>
     <string name="forget_password_discription">Averification code has been sent to the above your email. Please enter the code in the window above.</string>
+    <string name="confirm_text">Confirm</string>
+    <string name="resend_verification_code_text">Resend verification code</string>
 
 </resources>
