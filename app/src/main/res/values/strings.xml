@@ -50,5 +50,6 @@
     <string name="confirm_text">Confirm</string>
     <string name="resend_verification_code_text">Resend verification code</string>
     <string name="sign_up_text">Sign up</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

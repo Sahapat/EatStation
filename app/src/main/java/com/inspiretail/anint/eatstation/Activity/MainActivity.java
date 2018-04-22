@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         btn_train.setOnClickListener(itemClick);
         btn_nortification.setOnClickListener(itemClick);
         btn_dish.setOnClickListener(itemClick);
+        btn_profile.setOnClickListener(itemClick);
     }
 
     private void setOpenSearchBar(boolean status) {
@@ -146,6 +147,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_train:
                     intent = new Intent(MainActivity.this,TrainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btn_left:
+                    intent = new Intent(MainActivity.this,MapsActivity.class);
                     startActivity(intent);
                     break;
             }
