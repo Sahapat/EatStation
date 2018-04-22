@@ -7,30 +7,31 @@
     android:background="@drawable/bg_actionbar">
 
     <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-        android:id="@+id/btn_profile"
+        android:id="@+id/btn_left"
         android:layout_width="64dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
         android:background="@drawable/selector_btn_actionbar"
         android:src="@drawable/ic_profile" />
-    <com.inspiretail.anint.eatstation.TextView_rsu_font
+    <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+        android:id="@+id/txt_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Restuarant"
         app:font_style="bold"
-        android:textSize="30sp"
+        android:textColor="@color/toolbar_text_color"
+        android:textSize="@dimen/toolbar_text_main_size"
         android:gravity="center"
-        android:paddingBottom="8dp"
+        android:paddingBottom="@dimen/toolbar_text_main"
         />
-    <!--<com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
         android:id="@+id/img_eatstation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:src="@drawable/ic_eatstation" />-->
+        android:src="@drawable/ic_eatstation" />
     <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-        android:id="@+id/btn_search"
+        android:id="@+id/btn_right"
         android:layout_width="54dp"
         android:layout_height="match_parent"
         android:layout_gravity="right"
@@ -38,7 +39,7 @@
         android:src="@drawable/ic_search" />
 
     <SearchView
-        android:id="@+id/actionbar_search"
+        android:id="@+id/toolbar_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"

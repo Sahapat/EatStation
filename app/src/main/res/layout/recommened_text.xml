@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/recommend_text_paddingtop"
+    android:paddingLeft="@dimen/recommened_text_paddingleft"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_star" />
+
+    <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/layout_recommened_text"
+        android:textColor="@color/text_bold_black"
+        android:paddingLeft="8dp"
+        app:font_style="bold"
+        android:textSize="@dimen/recommened_header_size"
+        />
+</LinearLayout>
