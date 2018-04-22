@@ -62,8 +62,12 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.tv_lost:
+                    intent = new Intent(LoginActivity.this,ForgotPasswordActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.tv_signup:
+                    intent = new Intent(LoginActivity.this,SignUpActivity.class);
+                    startActivity(intent);
                     break;
             }
         }

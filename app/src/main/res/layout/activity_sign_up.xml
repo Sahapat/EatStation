@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="30dp"
+    android:orientation="vertical"
+    tools:context=".Activity.SignUpActivity">
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:id="@+id/btn_close"
+        android:clickable="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_close"
+        android:layout_gravity="right"
+        />
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:layout_marginTop="16dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_signup"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"
+        />
+    <EditText
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="14dp"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:hint="Email"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="14dp"
+        android:paddingLeft="10dp"
+        android:hint="Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="14dp"
+        android:paddingLeft="10dp"
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_text"
+        android:textSize="18sp"
+        android:background="@drawable/selector_btn_app"
+        />
+</LinearLayout>

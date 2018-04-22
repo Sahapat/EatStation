@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.GoogleLoginActivity" />
-        <activity android:name=".Activity.ForgotPasswordActivity"></activity>
+        <activity android:name=".Activity.ForgotPasswordActivity" />
+        <activity android:name=".Activity.SignUpActivity"></activity>
     </application>
 
 </manifest>
