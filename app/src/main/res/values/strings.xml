@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">EatStation</string>
     <string name="searchview_hint">Search</string>
+    <string name="layout_recommened_text">Recommened</string>
+    <string name="menu_koi_the_thailand">Koi The\' Thailand</string>
+    <string name="menu_bella_cas">Bella Cas</string>
+    <string name="menu_yentafour">เย็นตาโฟทรงเครื่อง</string>
+    <string name="menu_cafe_de_fin">Cafe\' De Fin</string>
+    <string name="menu_moomoo_eateru">Moo Moo Eatery</string>
+    <string name="menu_pork_noodle">นายเม้ง บะหมี่ปู เกี้ยวกุ้งยักษ์</string>
+    <string name="menu_papaya_salad">ส้มตำเด้อ</string>
+    <string name="menu_dean_deluca">Dean &amp; Deluca</string>
+    <string name="menu_amor">Amor</string>
+    <string name="menu_thaithyme">Thaithyme</string>
+    <string name="detail_location_koi_the_thailand">BTS สยาม</string>
+    <string name="detail_location_bella_cas">MRT บางซื่อ</string>
+    <string name="detail_location_yentafour">MRT ตลาดบางใหญ่</string>
+    <string name="detail_location_cafe_de_fin">MRT_คลองบางไผ่</string>
+    <string name="detail_location_moomoo_eateru">BTS ศาลาแดง</string>
+    <string name="detail_location_pork_noodle">BTS ศาลาแดง</string>
+    <string name="detail_location_papaya_salad">BTS ศาลาแดง</string>
+    <string name="detail_location_dean_deluca">BTS ศาลาแดง</string>
+    <string name="detail_location_amor">BTS ศาลาแดง</string>
+    <string name="detail_location_thaithyme">BTS ศาลาแดง</string>
 </resources>
