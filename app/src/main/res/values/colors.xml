@@ -8,4 +8,6 @@
     <color name="toolbar_text_color">#FED248</color>
     <color name="text_bold_black">#000000</color>
     <color name="text_brown_color">#2d2314</color>
+    <color name="facebookcancel_idel">#ffffff</color>
+    <color name="facebookcancel_press">#3e3e3e</color>
 </resources>

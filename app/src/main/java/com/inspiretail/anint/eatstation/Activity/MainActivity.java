@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.inspiretail.anint.eatstation.R;
 import com.inspiretail.anint.eatstation.SliderImageViewPagerAdapter;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private RecommenedMenuGroup recommenedMenuGroup2;
     private RecommenedMenuGroup recommenedMenuGroup3;
     private RecommenedMenuGroup recommenedMenuGroup4;
+    private LinearLayout navigation_bottom;
 
     private Intent intent;
 
@@ -34,11 +37,15 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btn_nortification;
     private ImageButton btn_train;
     private ImageButton btn_dish;
+
+    private boolean isFromLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Intent intent = getIntent();
+        isFromLogin = intent.getBooleanExtra("isFromLogin",false);
         InitInstance();
         InitViewPager();
     }
@@ -60,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         recommenedMenuGroup2 = findViewById(R.id.menu_group2);
         recommenedMenuGroup3 = findViewById(R.id.menu_group3);
         recommenedMenuGroup4 = findViewById(R.id.menu_group4);
+        navigation_bottom = findViewById(R.id.navigation_bottom);
         btn_home = findViewById(R.id.btn_home);
         btn_nortification = findViewById(R.id.btn_nortification);
         btn_train = findViewById(R.id.btn_train);
@@ -100,16 +108,19 @@ public class MainActivity extends AppCompatActivity {
             btn_Search.setVisibility(View.INVISIBLE);
             img_eatStation.setVisibility(View.INVISIBLE);
             actionbar_search.setVisibility(View.VISIBLE);
+            navigation_bottom.setVisibility(View.INVISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_none));
             actionbar_search.setIconified(false);
         } else {
             btn_profile.setVisibility(View.VISIBLE);
             btn_Search.setVisibility(View.VISIBLE);
             img_eatStation.setVisibility(View.VISIBLE);
+            navigation_bottom.setVisibility(View.VISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_none));
             actionbar_search.setVisibility(View.INVISIBLE);
         }
     }
+
 
     SearchView.OnCloseListener onCloseListener = new SearchView.OnCloseListener() {
         @Override
@@ -140,4 +151,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(isFromLogin)
+        {
+            finishAffinity();
+        }
+    }
 }

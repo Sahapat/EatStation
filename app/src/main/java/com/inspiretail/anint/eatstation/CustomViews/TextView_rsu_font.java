@@ -39,9 +39,7 @@ public class TextView_rsu_font extends android.support.v7.widget.AppCompatTextVi
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if(canvas != null) {
-            setFont_style();
-        }
+        setFont_style();
     }
 
     private void setFont_style() {

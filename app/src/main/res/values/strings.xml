@@ -31,4 +31,21 @@
     <string name="sign_in_with_facebook">sign in with facebook</string>
     <string name="lost_your_password">Lost your password?</string>
     <string name="sign_up">Sign up</string>
+    <string name="text_verify_lognin">ยืนยันการเข้าสู่ระบบ</string>
+    <string name="facebook_discription1">คุณได้เข้าสุ่ระบบ Eatstation ด้วย Facebook ก่อนหน้านี้</string>
+    <string name="facebook_discription2">คุณต้องการดำเเนินการต่อหรือไม่</string>
+    <string name="facebook_next_text">ดำเนินการต่อ</string>
+    <string name="text_facebook_cancel">ยกเลิก</string>
+    <string name="choose_an_account">Choose an account</string>
+    <string name="google_user1_mail">sasithorn.thpy@gmail.com</string>
+    <string name="google_user2_mail">sasithorn.t59@rsu.ac.th</string>
+    <string name="google_user3_mail">kayowhy95s@gmail.com</string>
+    <string name="google_user1_name">KoiKoy S.</string>
+    <string name="google_user2_name">Sasithorn Thapayom</string>
+    <string name="google_user3_name">Kkayo Why95s</string>
+    <string name="google_user_none">Use another account</string>
+    <string name="none"> </string>
+    <string name="forgot_email_text">koy1s@gmail.com</string>
+    <string name="forget_password_discription">Averification code has been sent to the above your email. Please enter the code in the window above.</string>
+
 </resources>
