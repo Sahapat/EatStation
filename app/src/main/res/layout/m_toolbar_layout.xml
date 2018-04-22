@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:font_style="bold"
+        android:paddingTop="8dp"
         android:textColor="@color/toolbar_text_color"
         android:textSize="@dimen/toolbar_text_main_size"
         android:gravity="center"

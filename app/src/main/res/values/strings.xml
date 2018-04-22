@@ -22,4 +22,13 @@
     <string name="detail_location_dean_deluca">BTS ศาลาแดง</string>
     <string name="detail_location_amor">BTS ศาลาแดง</string>
     <string name="detail_location_thaithyme">BTS ศาลาแดง</string>
+    <string name="toolbar_name_none"> </string>
+    <string name="toolbar_name_profile">Profile</string>
+    <string name="toolbar_name_restuarant">Restuarant</string>
+    <string name="toolbar_name_station">Station</string>
+    <string name="app_eatstation_name">EAT STATION</string>
+    <string name="btn_signin_text">Sign in</string>
+    <string name="sign_in_with_facebook">sign in with facebook</string>
+    <string name="lost_your_password">Lost your password?</string>
+    <string name="sign_up">Sign up</string>
 </resources>

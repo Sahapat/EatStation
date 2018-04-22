@@ -12,4 +12,5 @@
     <dimen name="recommend_text_paddingtop">12dp</dimen>
     <dimen name="recommened_text_paddingleft">16dp</dimen>
     <dimen name="recommened_header_size">24sp</dimen>
+    <dimen name="login_logo_paddingtop">8dp</dimen>
 </resources>

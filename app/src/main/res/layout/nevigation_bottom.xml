@@ -3,9 +3,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/actionbarsize"
-    android:orientation="horizontal"
-    android:background="@drawable/bottomnevigation"
     android:layout_gravity="bottom"
+    android:background="@drawable/bottomnevigation"
+    android:orientation="horizontal"
     tools:showIn="@layout/activity_main">
 
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_home"
+        android:background="@drawable/selector_btn_actionbar" />
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+        android:id="@+id/btn_train"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_train"
+        android:background="@drawable/selector_btn_actionbar" />
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+        android:id="@+id/btn_dish"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_dish"
+        android:background="@drawable/selector_btn_actionbar" />
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+        android:id="@+id/btn_nortification"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/ic_nortification"
+        android:background="@drawable/selector_btn_actionbar" />
 </LinearLayout>

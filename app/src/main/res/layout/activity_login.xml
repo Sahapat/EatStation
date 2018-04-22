@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LoginActivity">
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.5">
+
+            <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+                android:id="@+id/img_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_eatstation_main" />
+
+            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_logo"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/app_eatstation_name"
+                android:textColor="@color/text_brown_color"
+                android:textSize="32sp"
+                app:font_style="light" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="40dp"
+                android:maxLength="21"
+                android:maxLines="1"
+                android:background="@drawable/bg_user" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="40dp"
+                android:maxLength="21"
+                android:maxLines="1"
+                android:background="@drawable/bg_password" />
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="200dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_btn_login"
+                android:text="@string/btn_signin_text"
+                android:textColor="@color/toolbar_text_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="or"
+                android:textColor="@color/text_brown_color"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_login_facebook"
+                android:layout_width="200dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_btn_facebook"
+                android:text="@string/sign_in_with_facebook"
+                android:textColor="@color/text_brown_color"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_login_google"
+                android:layout_width="200dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_btn_google"
+                android:text="sign in with google"
+                android:textColor="@color/text_brown_color"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:layout_marginTop="4dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_lost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_gravity="left"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:textColor="@color/text_brown_color"
+                    android:text="@string/lost_your_password" />
+
+                <TextView
+                    android:id="@+id/tv_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_brown_color"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:text="@string/sign_up" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
