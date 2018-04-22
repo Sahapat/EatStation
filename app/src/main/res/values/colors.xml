@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#292929</color>
     <color name="color_btn_actionbar_idle">#ffffff</color>
     <color name="color_btn_actionbar_press">#c7c7c7</color>
+    <color name="toolbar_text_color">#FED248</color>
+    <color name="text_bold_black">#000000</color>
 </resources>

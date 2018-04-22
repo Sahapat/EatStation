@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="actionbarsize">56dp</dimen>
+    <dimen name="toolbar_text_main">6dp</dimen>
+    <dimen name="toolbar_text_main_size">30sp</dimen>
+    <dimen name="recommened_group_paddingbottom">16dp</dimen>
+    <dimen name="recommened_group_paddingtop">16dp</dimen>
+    <dimen name="recommened_group_paddingright">16dp</dimen>
+    <dimen name="recommened_group_paddingleft">16dp</dimen>
+    <dimen name="header_text_size">18sp</dimen>
+    <dimen name="content_text_size">16sp</dimen>
+    <dimen name="recommend_text_paddingtop">12dp</dimen>
+    <dimen name="recommened_text_paddingleft">16dp</dimen>
+    <dimen name="recommened_header_size">24sp</dimen>
 </resources>
