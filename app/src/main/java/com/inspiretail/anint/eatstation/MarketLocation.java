@@ -27,7 +27,7 @@ public class MarketLocation {
     }
 
     private static final MarketLocation instance = new MarketLocation();
-    public static Location[] m_Location = {
+    private static Location[] m_Location = {
             new Location(13.792962f, 100.550005f),
             new Location(13.790456f, 100.545220f),
             new Location(13.794764f, 100.550516f),
@@ -68,7 +68,10 @@ public class MarketLocation {
 
     private MarketLocation() {
     }
-
+    public static Location getLocation(int index)
+    {
+        return m_Location[index];
+    }
     public static MarketLocation getInstance() {
         return instance;
     }

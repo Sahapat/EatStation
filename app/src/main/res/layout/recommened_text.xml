@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_marginTop="2dp"
-        android:src="@drawable/ic_star" />
+        android:src="@drawable/ic_star"
+        />
 
     <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
         android:layout_width="wrap_content"
