@@ -94,14 +94,17 @@ public class NortificationActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_home:
                     intent = new Intent(NortificationActivity.this,MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_train:
                     intent = new Intent(NortificationActivity.this,TrainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_dish:
                     intent = new Intent(NortificationActivity.this,DishActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
             }

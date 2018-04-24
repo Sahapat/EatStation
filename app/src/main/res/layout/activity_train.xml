@@ -20,12 +20,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true">
-                <View
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.inspiretail.anint.eatstation.ViewGroups.TextSelectorBarGroup
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/actionbarsize"
-                    android:background="@android:color/transparent"
-                    />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actionbarsize"
+                        android:background="@android:color/transparent" />
+
+                    <FrameLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <include layout="@layout/bts_srilom" />
+
+                        <include layout="@layout/bts_sukrumvit" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actionbarsize"
+                        android:background="@android:color/transparent" />
+                </LinearLayout>
+            </FrameLayout>
         </ScrollView>
     </LinearLayout>
+
     <include layout="@layout/nevigation_bottom" />
 </FrameLayout>

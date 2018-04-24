@@ -38,14 +38,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btn_train;
     private ImageButton btn_dish;
 
-    private boolean isFromLogin;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent intent = getIntent();
-        isFromLogin = intent.getBooleanExtra("isFromLogin",false);
         InitInstance();
         InitViewPager();
     }
@@ -139,14 +136,17 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_dish:
                     intent = new Intent(MainActivity.this,DishActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_nortification:
                     intent = new Intent(MainActivity.this,NortificationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_train:
                     intent = new Intent(MainActivity.this,TrainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_left:
@@ -156,13 +156,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if(isFromLogin)
-        {
-            finishAffinity();
-        }
-    }
 }

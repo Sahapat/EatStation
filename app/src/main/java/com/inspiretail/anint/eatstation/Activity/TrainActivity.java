@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import com.inspiretail.anint.eatstation.R;
@@ -26,6 +28,11 @@ public class TrainActivity extends AppCompatActivity {
     private ImageButton btn_dish;
 
     private Intent intent;
+
+    private LinearLayout fragment_srilom;
+    private LinearLayout fragment_sukrumvit;
+    private FrameLayout container;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +51,10 @@ public class TrainActivity extends AppCompatActivity {
         btn_nortification = findViewById(R.id.btn_nortification);
         btn_train = findViewById(R.id.btn_train);
         btn_dish = findViewById(R.id.btn_dish);
+        fragment_srilom = findViewById(R.id.fragment_srilom);
+        fragment_sukrumvit = findViewById(R.id.fragment_sukrumvit);
+        container = findViewById(R.id.container);
+
         InitClick();
         setViewContent();
     }
@@ -92,15 +103,18 @@ public class TrainActivity extends AppCompatActivity {
                     setOpenSearchBar(true);
                     break;
                 case R.id.btn_home:
-                    intent = new Intent(TrainActivity.this,MainActivity.class);
+                    intent = new Intent(TrainActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_nortification:
-                    intent = new Intent(TrainActivity.this,NortificationActivity.class);
+                    intent = new Intent(TrainActivity.this, NortificationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_dish:
-                    intent = new Intent(TrainActivity.this,DishActivity.class);
+                    intent = new Intent(TrainActivity.this, DishActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
             }

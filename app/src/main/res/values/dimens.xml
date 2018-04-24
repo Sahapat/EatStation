@@ -14,4 +14,6 @@
     <dimen name="recommened_header_size">24sp</dimen>
     <dimen name="login_logo_paddingtop">8dp</dimen>
     <dimen name="login_btn_size">230dp</dimen>
+    <dimen name="trian_connecter_size">230dp</dimen>
+    <dimen name="train_connecter_text_size">24sp</dimen>
 </resources>

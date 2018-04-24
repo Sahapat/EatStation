@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
             {
                 case R.id.btn_sign_in:
                     intent = new Intent(LoginActivity.this,MainActivity.class);
-                    intent.putExtra("isFromLogin",true);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     break;
                 case R.id.btn_login_facebook:

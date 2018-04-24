@@ -93,14 +93,17 @@ public class DishActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_home:
                     intent = new Intent(DishActivity.this,MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_nortification:
                     intent = new Intent(DishActivity.this,NortificationActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_train:
                     intent = new Intent(DishActivity.this,TrainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
             }
