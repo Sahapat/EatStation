@@ -55,8 +55,13 @@ public class TrainActivity extends AppCompatActivity {
         fragment_sukrumvit = findViewById(R.id.fragment_sukrumvit);
         container = findViewById(R.id.container);
 
+        UpdateTrainPoint();
         InitClick();
         setViewContent();
+    }
+
+    private void UpdateTrainPoint()
+    {
     }
 
     private void setViewContent() {

@@ -48,6 +48,10 @@
                         <include layout="@layout/bts_srilom" />
 
                         <include layout="@layout/bts_sukrumvit" />
+
+                        <include layout="@layout/mrt_blue"/>
+
+                        <include layout="@layout/mrt_violet"/>
                     </FrameLayout>
 
                     <View
