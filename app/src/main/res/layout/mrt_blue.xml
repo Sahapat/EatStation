@@ -8,7 +8,7 @@
     android:layout_marginTop="16dp"
     android:orientation="vertical"
     android:paddingLeft="50dp"
-    android:visibility="visible"
+    android:visibility="invisible"
     tools:showIn="@layout/activity_train">
 
     <RelativeLayout

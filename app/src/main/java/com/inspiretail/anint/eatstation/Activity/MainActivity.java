@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = getIntent();
         InitInstance();
         InitViewPager();
     }
@@ -150,8 +149,6 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.btn_left:
-                    intent = new Intent(MainActivity.this,MapsActivity.class);
-                    startActivity(intent);
                     break;
             }
         }

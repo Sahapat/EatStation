@@ -23,7 +23,7 @@ public class TextSelectorBarGroup extends FrameLayout {
     private TextView txt_frame3;
     private TextView txt_frame4;
 
-    private boolean isExpand;
+    private boolean isExapand;
 
     public TextSelectorBarGroup(@NonNull Context context) {
         super(context);
@@ -50,50 +50,63 @@ public class TextSelectorBarGroup extends FrameLayout {
         InitInstance();
     }
 
-    public void setClickListener(View.OnClickListener clickListener)
-    {
+    public void setClickListener(View.OnClickListener clickListener) {
         frame_1.setOnClickListener(clickListener);
         frame_2.setOnClickListener(clickListener);
         frame_3.setOnClickListener(clickListener);
         frame_4.setOnClickListener(clickListener);
     }
-    public void setTxt_frame1(String text)
-    {
+
+    public String getTxt_frame1() {
+        return txt_frame1.getText().toString();
+    }
+
+    public String getTxt_frame2() {
+        return txt_frame2.getText().toString();
+    }
+
+    public String getTxt_frame3() {
+        return txt_frame3.getText().toString();
+    }
+
+    public String getTxt_frame4() {
+        return txt_frame4.getText().toString();
+    }
+
+    public boolean getisExpand() {
+        return isExapand;
+    }
+
+    public void setTxt_frame1(String text) {
         txt_frame1.setText(text);
     }
-    public void setTxt_frame2(String text)
-    {
+
+    public void setTxt_frame2(String text) {
         txt_frame2.setText(text);
     }
-    public void setTxt_frame3(String text)
-    {
+
+    public void setTxt_frame3(String text) {
         txt_frame3.setText(text);
     }
-    public void setTxt_frame4(String text)
-    {
+
+    public void setTxt_frame4(String text) {
         txt_frame4.setText(text);
     }
-    public boolean isExpand()
-    {
-        return isExpand;
-    }
-    public void SwitchExpandTxtView()
-    {
-        if(isExpand)
-        {
-            frame_2.setVisibility(View.INVISIBLE);
-            frame_3.setVisibility(View.INVISIBLE);
-            frame_4.setVisibility(View.INVISIBLE);
-            isExpand = false;
-        }
-        else
-        {
+
+    public void setExpandTxtView(boolean status) {
+        if (status) {
             frame_2.setVisibility(View.VISIBLE);
             frame_3.setVisibility(View.VISIBLE);
             frame_4.setVisibility(View.VISIBLE);
-            isExpand = true;
+            this.isExapand = true;
+        } else {
+            frame_2.setVisibility(View.INVISIBLE);
+            frame_3.setVisibility(View.INVISIBLE);
+            frame_4.setVisibility(View.INVISIBLE);
+            this.isExapand = false;
         }
     }
+
     private void InitInstance() {
         frame_1 = findViewById(R.id.frame_1);
         frame_2 = findViewById(R.id.frame_2);
@@ -107,6 +120,6 @@ public class TextSelectorBarGroup extends FrameLayout {
     }
 
     private void InitInflate() {
-        inflate(getContext(), R.layout.txt_selector_bar_group,this);
+        inflate(getContext(), R.layout.txt_selector_bar_group, this);
     }
 }

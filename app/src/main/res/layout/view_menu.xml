@@ -2,9 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
         android:id="@+id/img_show"
@@ -12,46 +11,22 @@
         android:layout_height="250dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_menu_top1"
-        />
-    <RelativeLayout
-        android:layout_marginTop="16dp"
+        android:src="@drawable/img_menu_top1" />
+
+
+    <include layout="@layout/view_menu_rate_bar" />
+
+    <include layout="@layout/view_menu_detail" />
+
+    <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-            android:id="@+id/txt_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rate_text"
-            app:font_style="regular"
-            android:textSize="20sp"
-            android:textColor="@color/text_bold_black"
-            />
-        <com.willy.ratingbar.ScaleRatingBar
-            android:id="@+id/simpleRatingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/txt_rate"
-            app:srb_numStars="5"
-            app:srb_minimumStars="1"
-            app:srb_rating="2"
-            app:srb_starWidth="20dp"
-            app:srb_starHeight="20dp"
-            app:srb_starPadding="5dp"
-            app:srb_stepSize="0.5"
-            app:srb_isIndicator="false"
-            app:srb_clickable="true"
-            app:srb_scrollable="true"
-            app:srb_clearRatingEnabled="true">
-        </com.willy.ratingbar.ScaleRatingBar>
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        
-    </LinearLayout>
+        android:text="Reviews"
+        android:textColor="@color/text_bold_black"
+        android:textSize="26sp"
+        app:font_style="bold" />
 
+    <include layout="@layout/view_menu_comment" />
 </LinearLayout>

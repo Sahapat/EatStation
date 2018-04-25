@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragment_blue_mrt"
+    android:id="@+id/fragment_mrt_violet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
     android:orientation="vertical"
     android:paddingLeft="50dp"
-    android:visibility="invisible"
+    android:visibility="visible"
     tools:showIn="@layout/activity_train">
 
     <RelativeLayout
@@ -17,7 +17,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_hua_lamphong"
+            android:id="@+id/btn_khlong_bang_phai"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -26,20 +26,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_hua_lamphong"
+            android:layout_below="@id/btn_khlong_bang_phai"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_hua_lamphong">
+            android:layout_toRightOf="@id/btn_khlong_bang_phai">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="หัวลำโพง\nHua Lamphong"
+                android:text="คลองบางไผ่\nKhlong Bang Phai"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -52,7 +52,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_sam_yan"
+            android:id="@+id/btn_talad_bang_yai"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -61,20 +61,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_sam_yan"
+            android:layout_below="@id/btn_talad_bang_yai"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_sam_yan">
+            android:layout_toRightOf="@id/btn_talad_bang_yai">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="สามย่าน\nSam Yan"
+                android:text="ตลาดบางใหญ่\nTalad Bang Yai"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -87,7 +87,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_si_lom"
+            android:id="@+id/btn_sam_yaek_bang_yai"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -96,20 +96,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_si_lom"
+            android:layout_below="@id/btn_sam_yaek_bang_yai"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_si_lom">
+            android:layout_toRightOf="@id/btn_sam_yaek_bang_yai">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="สีลม\nSi Lom"
+                android:text="สามแยกบางใหญ่\nSam Yark Bang Yai"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -122,7 +122,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_lumphini"
+            android:id="@+id/btn_bang_phu"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -131,20 +131,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_lumphini"
+            android:layout_below="@id/btn_bang_phu"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_lumphini">
+            android:layout_toRightOf="@id/btn_bang_phu">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="ลุมพินี\nLumphini"
+                android:text="บางพลู\nBang Phu"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -157,7 +157,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_victory_monument"
+            android:id="@+id/btn_bang_rak_yai"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -166,20 +166,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_victory_monument"
+            android:layout_below="@id/btn_bang_rak_yai"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_victory_monument">
+            android:layout_toRightOf="@id/btn_bang_rak_yai">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="อนุสาวรีย์ชัยสมรภูมิ\nVectory Monument"
+                android:text="บางรักใหญ่\nBang Rak Yai"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -192,7 +192,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_Phaya_Thai"
+            android:id="@+id/btn_bang_rak_noi_tha_it"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -201,20 +201,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_Phaya_Thai"
+            android:layout_below="@id/btn_bang_rak_noi_tha_it"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_Phaya_Thai">
+            android:layout_toRightOf="@id/btn_bang_rak_noi_tha_it">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="พญาไทย\nPhaya Thai"
+                android:text="บางรักน้อยท่าอิฐ\nBang Rak Noi ThaIt"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -227,7 +227,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_ratchathewi"
+            android:id="@+id/btn_sai_ma"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -236,20 +236,92 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_ratchathewi"
+            android:layout_below="@id/btn_sai_ma"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_ratchathewi">
+            android:layout_toRightOf="@id/btn_sai_ma">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="ราชเทวี\nRatchathewi"
+                android:text="ไทรม้า\nSai Ma"
+                android:textColor="@color/text_bold_black"
+                android:textSize="@dimen/train_connecter_text_size"
+                app:font_style="bold" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/trian_connecter_size"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+            android:id="@+id/btn_phra_nong_klao_bridge"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_btn_train_station" />
+
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+            android:layout_width="45dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_below="@id/btn_phra_nong_klao_bridge"
+            android:src="@drawable/img_train_connect" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/btn_phra_nong_klao_bridge">
+
+            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="สะพานพระนั่งเกล้า\nPhra Nong Klao Bridge"
+                android:textColor="@color/text_bold_black"
+                android:textSize="@dimen/train_connecter_text_size"
+                app:font_style="bold" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/trian_connecter_size"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+            android:id="@+id/btn_yaek_nonthaburi"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_btn_train_station" />
+
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+            android:layout_width="45dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_below="@id/btn_yaek_nonthaburi"
+            android:src="@drawable/img_train_connect" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/btn_yaek_nonthaburi">
+
+            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="แยกนนทบุรี1\nYaek Nonthaburi 1"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -262,7 +334,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_siam"
+            android:id="@+id/btn_bang_krasor"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -271,20 +343,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_siam"
+            android:layout_below="@id/btn_bang_krasor"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_siam">
+            android:layout_toRightOf="@id/btn_bang_krasor">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="สยาม\nSiam"
+                android:text="บางกระสอ\nBang Krasor"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -297,7 +369,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_chit_lom"
+            android:id="@+id/btn_nonthaburi_civic_center"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -306,20 +378,56 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_chit_lom"
+            android:layout_below="@id/btn_nonthaburi_civic_center"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_chit_lom">
+            android:layout_toRightOf="@id/btn_nonthaburi_civic_center">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="ชิดลม\nChit Lom"
+                android:text="ศุนย์ราชการนนทบุรี\nNonthaburi Civic Center"
+                android:textColor="@color/text_bold_black"
+                android:textSize="@dimen/train_connecter_text_size"
+                app:font_style="bold" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/trian_connecter_size"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
+            android:id="@+id/btn_ministry_of_public_health"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/selector_btn_train_station" />
+
+        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+            android:layout_width="45dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:layout_below="@id/btn_ministry_of_public_health"
+            android:src="@drawable/img_train_connect" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/btn_ministry_of_public_health">
+
+            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="กระทรวงสาธารณะสุข\nMinistry Of Public Health"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -332,7 +440,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_phloen_chit"
+            android:id="@+id/btn_yaek_tiwanon"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -341,20 +449,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_phloen_chit"
+            android:layout_below="@id/btn_yaek_tiwanon"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_phloen_chit">
+            android:layout_toRightOf="@id/btn_yaek_tiwanon">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="เพลินจิต\nPhloen Chit"
+                android:text="แยกติวานนท์\nYaek Tiwanon"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -367,7 +475,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_nana"
+            android:id="@+id/btn_wong_sawang"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -376,20 +484,20 @@
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_below="@id/btn_nana"
+            android:layout_below="@id/btn_wong_sawang"
             android:src="@drawable/img_train_connect" />
 
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_nana">
+            android:layout_toRightOf="@id/btn_wong_sawang">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="นานา\nNana"
+                android:text="วงศ์สว่าง\nWong Sawang"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
@@ -402,357 +510,7 @@
         android:layout_gravity="center_horizontal">
 
         <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_asok"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_asok"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_asok">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="อโศก\nAsok"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_phrom_phong"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_phrom_phong"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_phrom_phong">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="พร้อมพงษ์\nPhrom Phong"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_thong_lo"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_thong_lo"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_thong_lo">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="ทองหล่อ\nThong Lo"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_ekkamai"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_ekkamai"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_ekkamai">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="เอกมัย\nEkkamai"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_phra_khanong"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_phra_khanong"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_phra_khanong">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="พระโขนง\nPhra Khanong"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_on_nut"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_on_nut"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_on_nut">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="อ่อนนุช\nOn Nut"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_bang_chak"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_bang_chak"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_bang_chak">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="บางจาก\nBang Chak"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_punnawithi"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_punnawithi"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_punnawithi">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="ปุณณวิถี\nPunnawithi"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_udom_suk"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_udom_suk"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_udom_suk">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="อุดมสุข\nUdom Suk"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_bang_na"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/selector_btn_train_station" />
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_below="@id/btn_bang_na"
-            android:src="@drawable/img_train_connect" />
-
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_bang_na">
-
-            <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:text="บางนา\nBang Na"
-                android:textColor="@color/text_bold_black"
-                android:textSize="@dimen/train_connecter_text_size"
-                app:font_style="bold" />
-        </FrameLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="@dimen/trian_connecter_size"
-        android:layout_height="90dp"
-        android:layout_gravity="center_horizontal">
-
-        <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageButton
-            android:id="@+id/btn_bearing"
+            android:id="@+id/btn_bang_san"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:background="@android:color/transparent"
@@ -762,17 +520,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/btn_bearing">
+            android:layout_toRightOf="@id/btn_bang_san">
 
             <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:text="แบริ่ง\nBearing"
+                android:text="บางช่อน\nBang San"
                 android:textColor="@color/text_bold_black"
                 android:textSize="@dimen/train_connecter_text_size"
                 app:font_style="bold" />
         </FrameLayout>
     </RelativeLayout>
-
 </LinearLayout>

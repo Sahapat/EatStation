@@ -52,5 +52,9 @@
     <string name="sign_up_text">Sign up</string>
     <string name="title_activity_maps">Map</string>
     <string name="rate_text">Rate</string>
+    <string name="station_bts_silom">สถานีรถไฟฟ้า BTS สายสีลม</string>
+    <string name="station_bts_sukrumvit">สถานีรถไฟฟ้า BTS สายสุขุมวิท</string>
+    <string name="station_mrt_blue">สถานีรถไฟฟ้า MRT สายสีน้ำเงิน</string>
+    <string name="station_mrt_violet">สถานีรถไฟฟ้า MRT สายสีม่วง</string>
 
 </resources>

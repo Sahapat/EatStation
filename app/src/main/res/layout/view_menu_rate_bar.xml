@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    tools:showIn="@layout/view_menu">
+
+    <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
+        android:id="@+id/txt_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_text"
+        android:textColor="@color/text_bold_black"
+        android:textSize="20sp"
+        app:font_style="regular" />
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/rate_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_rate"
+        app:srb_clearRatingEnabled="true"
+        app:srb_clickable="true"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="5"
+        app:srb_rating="2"
+        app:srb_scrollable="true"
+        app:srb_starHeight="20dp"
+        app:srb_starPadding="5dp"
+        app:srb_starWidth="20dp"
+        app:srb_stepSize="0.5" />
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:id="@+id/btn_heart"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_heart" />
+
+    <com.inthecheesefactory.thecheeselibrary.widget.AdjustableImageView
+        android:id="@+id/btn_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@id/btn_heart"
+        android:clickable="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_comment" />
+</RelativeLayout>
+
+    

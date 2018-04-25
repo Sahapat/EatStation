@@ -8,10 +8,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.SearchView;
 
 import com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font;
-import com.inspiretail.anint.eatstation.MarketLocation;
 import com.inspiretail.anint.eatstation.R;
 
 public class RecommenedMenuGroup extends FrameLayout {

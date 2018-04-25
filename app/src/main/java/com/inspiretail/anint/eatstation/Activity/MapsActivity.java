@@ -4,13 +4,9 @@ import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.inspiretail.anint.eatstation.MarketLocation;
 import com.inspiretail.anint.eatstation.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -50,8 +46,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng myLocation = new LatLng(MarketLocation.getLocation(indexLocation).getLatitude(), MarketLocation.getLocation(indexLocation).getLongtitude());
+        /*LatLng myLocation = new LatLng(Markets.getLocation(indexLocation).getLatitude(), Markets.getLocation(indexLocation).getLongtitude());
         mMap.addMarker(new MarkerOptions().position(myLocation).title(titleLocation));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation));*/
     }
 }
