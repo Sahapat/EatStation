@@ -1,5 +1,7 @@
 package com.inspiretail.anint.eatstation;
 
+import android.content.Intent;
+
 public class Markets {
 
     /*public static class Location {
@@ -38,7 +40,7 @@ public class Markets {
             }
         }
 
-        private int rate;
+        private float rate;
         private boolean isComment;
         private boolean isLike;
         private String name;
@@ -48,14 +50,16 @@ public class Markets {
         private String money;
         private String comment;
         private Location location;
+        private Integer image;
 
-        public Detail(String name, String train, String txt_location, String time, String money, Location location) {
+        public Detail(String name, String train, String txt_location, String time, String money,Integer image, Location location) {
             this.name = name;
             this.train = train;
             this.txt_location = txt_location;
             this.time = time;
             this.money = money;
             this.location = location;
+            this.image = image;
             comment = "";
             rate = 0;
             isComment = false;
@@ -78,7 +82,7 @@ public class Markets {
             this.isComment = status;
         }
 
-        public int getRate() {
+        public float getRate() {
             return rate;
         }
 
@@ -110,6 +114,10 @@ public class Markets {
             return time;
         }
 
+        public Integer getImage() {
+            return image;
+        }
+
         public String getTrain() {
             return train;
         }
@@ -122,11 +130,9 @@ public class Markets {
     private static Markets instance = new Markets();
     private static Detail[] m_details = {
             new Detail("ร้าน ข้าวมันไก่มงคลวัฒนา","BTS สะพานควาย","670/6 หน้าโรงหนังมงคาลรามา (รพ.เปาโล) ถนนพหลโยธิน พญาไทย กรุงเทพฯ","ทุกวัน 8:30 - 20:00","ต่ำกว่า 100 บาท",
-                    new Detail.Location(13.792962f, 100.550005f)),
+                    R.drawable.img_view1,new Detail.Location(13.792962f, 100.550005f)),
                     new Detail("ร้าน นม-หนม สะพานควาย","BTS สะพานควาย","ปากซอย","ทุกวัน 8:30 - 20:00","ต่ำกว่า 100 บาท",
-                    new Detail.Location(13.792962f, 100.550005f)),
-                    new Detail("ร้าน ข้าวมันไก่มงคลวัฒนา","BTS สะพานควาย","670/6 หน้าโรงหนังมงคาลรามา(รพ.เปาโล) ถนนพหลโยธิน พญาไทย กรุงเทพฯ","ทุกวัน 8:30 - 20:00","ต่ำกว่า 100 บาท",
-                    new Detail.Location(13.792962f, 100.550005f)),
+                    R.drawable.img_view2,new Detail.Location(13.792962f, 100.550005f))
     };
     /*private static Location[] m_Location = {
             new Location(13.792962f, 100.550005f),
@@ -172,5 +178,9 @@ public class Markets {
 
     public static Markets getInstance() {
         return instance;
+    }
+    public static Detail getDetail(int index)
+    {
+        return m_details[index];
     }
 }

@@ -47,7 +47,8 @@
         <activity
             android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".Activity.NewPasswordActivity"></activity>
+        <activity android:name=".Activity.NewPasswordActivity" />
+        <activity android:name=".Activity.MenuViewActivity"></activity>
     </application>
 
 </manifest>
