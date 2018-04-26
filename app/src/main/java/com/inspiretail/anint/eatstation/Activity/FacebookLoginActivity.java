@@ -40,6 +40,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
                 case R.id.btn_next:
                     Intent intent = new Intent(FacebookLoginActivity.this,MainActivity.class);
                     intent.putExtra("isFromLogin",true);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.btn_cancel:

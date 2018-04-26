@@ -66,6 +66,7 @@ public class GoogleLoginActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent = new Intent(GoogleLoginActivity.this,MainActivity.class);
             intent.putExtra("isFromLogin",true);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(intent);
         }
     };

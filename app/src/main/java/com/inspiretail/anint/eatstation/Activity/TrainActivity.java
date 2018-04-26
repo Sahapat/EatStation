@@ -21,14 +21,7 @@ public class TrainActivity extends AppCompatActivity {
     private SearchView actionbar_search;
     private ImageView img_eatStation;
     private ToolbarGroup toolbar;
-
-    private Integer home_resource_active = R.drawable.ic_train_active;
-    private ImageButton btn_home;
-    private ImageButton btn_nortification;
-    private ImageButton btn_train;
-    private ImageButton btn_dish;
-
-    private Intent intent;
+    private LinearLayout navigation_bottom;
 
     private LinearLayout fragment_srilom;
     private int srilom_height;
@@ -53,8 +46,6 @@ public class TrainActivity extends AppCompatActivity {
     private ImageButton btn_lard_pao;
 
     private ImageButton btn_bang_khlong_bang_phai;
-    private ImageButton btn_talad_bang_yai;
-    private ImageButton btn_phra_nung_khlao;
 
     private TextSelectorBarGroup textSelectorBarGroup;
 
@@ -67,15 +58,12 @@ public class TrainActivity extends AppCompatActivity {
     }
 
     private void InitInstance() {
+        navigation_bottom = findViewById(R.id.navigation_bottom);
         toolbar = findViewById(R.id.app_toolbar);
         btn_profile = toolbar.findViewById(R.id.btn_left);
         img_eatStation = findViewById(R.id.img_eatstation);
         btn_Search = findViewById(R.id.btn_right);
         actionbar_search = findViewById(R.id.toolbar_search);
-        btn_home = findViewById(R.id.btn_home);
-        btn_nortification = findViewById(R.id.btn_nortification);
-        btn_train = findViewById(R.id.btn_train);
-        btn_dish = findViewById(R.id.btn_dish);
         fragment_srilom = findViewById(R.id.fragment_srilom);
         fragment_sukrumvit = findViewById(R.id.fragment_sukrumvit);
         fragement_mrt_blue = findViewById(R.id.fragment_blue_mrt);
@@ -90,8 +78,6 @@ public class TrainActivity extends AppCompatActivity {
         btn_petchburi = findViewById(R.id.btn_phetchaburi);
         btn_lard_pao = findViewById(R.id.btn_lat_phrao);
         btn_bang_khlong_bang_phai = findViewById(R.id.btn_khlong_bang_phai);
-        btn_talad_bang_yai = findViewById(R.id.btn_talad_bang_yai);
-        btn_phra_nung_khlao = findViewById(R.id.btn_phra_nong_klao_bridge);
         container = findViewById(R.id.container);
         textSelectorBarGroup = findViewById(R.id.txt_selected_group);
         textSelectorBarGroup.bringToFront();
@@ -103,10 +89,6 @@ public class TrainActivity extends AppCompatActivity {
         InitClick();
         setViewContent();
     }
-
-    private void setExpandTxtSelectedBarGroup(boolean status) {
-    }
-
     private void setSelectedText(String selected) {
 
         if (selected == getString(R.string.station_bts_silom)) {
@@ -149,7 +131,6 @@ public class TrainActivity extends AppCompatActivity {
     }
 
     private void setViewContent() {
-        btn_train.setImageResource(home_resource_active);
         img_eatStation.setVisibility(View.INVISIBLE);
         toolbar.setMainText(getString(R.string.toolbar_name_station));
         setSelectedText(getString(R.string.station_bts_silom));
@@ -158,9 +139,6 @@ public class TrainActivity extends AppCompatActivity {
     private void InitClick() {
         btn_Search.setOnClickListener(itemClick);
         actionbar_search.setOnCloseListener(onCloseListener);
-        btn_dish.setOnClickListener(itemClick);
-        btn_nortification.setOnClickListener(itemClick);
-        btn_home.setOnClickListener(itemClick);
         textSelectorBarGroup.setClickListener(itemClick);
         btn_saphan_buf.setOnClickListener(itemClick);
         btn_mo_chit.setOnClickListener(itemClick);
@@ -172,8 +150,6 @@ public class TrainActivity extends AppCompatActivity {
         btn_petchburi.setOnClickListener(itemClick);
         btn_lard_pao.setOnClickListener(itemClick);
         btn_bang_khlong_bang_phai.setOnClickListener(itemClick);
-        btn_talad_bang_yai.setOnClickListener(itemClick);
-        btn_phra_nung_khlao.setOnClickListener(itemClick);
     }
 
     private void setOpenSearchBar(boolean status) {
@@ -183,11 +159,13 @@ public class TrainActivity extends AppCompatActivity {
             actionbar_search.setVisibility(View.VISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_none));
             actionbar_search.setIconified(false);
+            navigation_bottom.setVisibility(View.INVISIBLE);
         } else {
             btn_profile.setVisibility(View.VISIBLE);
             btn_Search.setVisibility(View.VISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_station));
             actionbar_search.setVisibility(View.INVISIBLE);
+            navigation_bottom.setVisibility(View.VISIBLE);
         }
     }
 
@@ -201,24 +179,11 @@ public class TrainActivity extends AppCompatActivity {
     View.OnClickListener itemClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            Intent intent;
+            int[] marketIndexs;
             switch (v.getId()) {
                 case R.id.btn_right:
                     setOpenSearchBar(true);
-                    break;
-                case R.id.btn_home:
-                    intent = new Intent(TrainActivity.this, MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_nortification:
-                    intent = new Intent(TrainActivity.this, NortificationActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_dish:
-                    intent = new Intent(TrainActivity.this, DishActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
                     break;
                 case R.id.frame_1:
                     if (textSelectorBarGroup.getisExpand()) {
@@ -253,28 +218,64 @@ public class TrainActivity extends AppCompatActivity {
                     }
                     break;
                 case R.id.btn_saphan_khwai:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs =new int[]{0,1,2};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_mo_chit:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{3,4,5};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_ari:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{6,7,8};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_chong_nonsi:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{9,10,11};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_sala_dang:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{12,13,14};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_national_stadium:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{15,16,17};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_bang_sue:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{27,28,29};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_phetchaburi:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{21,22,23};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_lat_phrao:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{24,25,26};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
                 case R.id.btn_khlong_bang_phai:
-                    break;
-                case R.id.btn_talad_bang_yai:
-                    break;
-                case R.id.btn_phra_nong_klao_bridge:
+                    intent = new Intent(TrainActivity.this,StationActivity.class);
+                    marketIndexs = new int[]{18,19,20};
+                    intent.putExtra("marketIndexs",marketIndexs);
+                    startActivity(intent);
                     break;
             }
         }

@@ -15,6 +15,7 @@ import com.inspiretail.anint.eatstation.R;
 import com.inspiretail.anint.eatstation.SliderImageViewPagerAdapter;
 import com.inspiretail.anint.eatstation.ViewGroups.RecommenedMenuGroup;
 import com.inspiretail.anint.eatstation.ViewGroups.ToolbarGroup;
+import com.inspiretail.anint.eatstation.ViewGroups.ViewMenuGroup;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,14 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private RecommenedMenuGroup recommenedMenuGroup3;
     private RecommenedMenuGroup recommenedMenuGroup4;
     private LinearLayout navigation_bottom;
-
-    private Intent intent;
-
-    private Integer home_resource_active = R.drawable.ic_home_active;
-    private ImageButton btn_home;
-    private ImageButton btn_nortification;
-    private ImageButton btn_train;
-    private ImageButton btn_dish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,39 +57,26 @@ public class MainActivity extends AppCompatActivity {
         recommenedMenuGroup3 = findViewById(R.id.menu_group3);
         recommenedMenuGroup4 = findViewById(R.id.menu_group4);
         navigation_bottom = findViewById(R.id.navigation_bottom);
-        btn_home = findViewById(R.id.btn_home);
-        btn_nortification = findViewById(R.id.btn_nortification);
-        btn_train = findViewById(R.id.btn_train);
-        btn_dish = findViewById(R.id.btn_dish);
 
         InitClick();
         setViewContent();
     }
 
     private void setViewContent() {
-        btn_home.setImageResource(home_resource_active);
         toolbar.setMainText(getString(R.string.toolbar_name_none));
-        recommenedMenuGroup1.setImg_show(R.drawable.img_menu1);
-        recommenedMenuGroup1.setHeader_show(getString(R.string.menu_koi_the_thailand));
-        recommenedMenuGroup1.setContent_show(getString(R.string.detail_location_koi_the_thailand));
-        recommenedMenuGroup2.setImg_show(R.drawable.img_menu2);
-        recommenedMenuGroup2.setHeader_show(getString(R.string.menu_bella_cas));
-        recommenedMenuGroup2.setContent_show(getString(R.string.detail_location_bella_cas));
-        recommenedMenuGroup3.setImg_show(R.drawable.img_menu3);
-        recommenedMenuGroup3.setHeader_show(getString(R.string.menu_yentafour));
-        recommenedMenuGroup3.setContent_show(getString(R.string.detail_location_yentafour));
-        recommenedMenuGroup4.setImg_show(R.drawable.img_menu4);
-        recommenedMenuGroup4.setHeader_show(getString(R.string.menu_cafe_de_fin));
-        recommenedMenuGroup4.setContent_show(getString(R.string.detail_location_cafe_de_fin));
+        recommenedMenuGroup1.setMarketindex(0);
+        recommenedMenuGroup2.setMarketindex(1);
+        recommenedMenuGroup3.setMarketindex(2);
+        recommenedMenuGroup4.setMarketindex(3);
     }
 
     private void InitClick() {
-        btn_Search.setOnClickListener(itemClick);
         actionbar_search.setOnCloseListener(onCloseListener);
-        btn_train.setOnClickListener(itemClick);
-        btn_nortification.setOnClickListener(itemClick);
-        btn_dish.setOnClickListener(itemClick);
-        btn_profile.setOnClickListener(itemClick);
+        btn_Search.setOnClickListener(itemClick);
+        recommenedMenuGroup1.setOnClickListener(itemClick);
+        recommenedMenuGroup2.setOnClickListener(itemClick);
+        recommenedMenuGroup3.setOnClickListener(itemClick);
+        recommenedMenuGroup4.setOnClickListener(itemClick);
     }
 
     private void setOpenSearchBar(boolean status) {
@@ -132,23 +112,6 @@ public class MainActivity extends AppCompatActivity {
             switch (v.getId()) {
                 case R.id.btn_right:
                     setOpenSearchBar(true);
-                    break;
-                case R.id.btn_dish:
-                    intent = new Intent(MainActivity.this,DishActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_nortification:
-                    intent = new Intent(MainActivity.this,NortificationActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_train:
-                    intent = new Intent(MainActivity.this,TrainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_left:
                     break;
             }
         }

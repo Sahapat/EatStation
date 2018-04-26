@@ -2,14 +2,18 @@ package com.inspiretail.anint.eatstation.ViewGroups;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.inspiretail.anint.eatstation.Activity.MenuViewActivity;
 import com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font;
+import com.inspiretail.anint.eatstation.Markets;
 import com.inspiretail.anint.eatstation.R;
 
 public class RecommenedMenuGroup extends FrameLayout {
@@ -42,10 +46,18 @@ public class RecommenedMenuGroup extends FrameLayout {
         InitInflate();
         InitInstance();
     }
-    public void setOpenLocation(int marketindex)
+    public void setMarketindex(int index)
     {
-        this.marketindex = marketindex;
+        this.marketindex = index;
+        updateContent();
     }
+
+    private void updateContent() {
+        setImg_show(Markets.getDetail(marketindex).getImage());
+        setHeader_show(Markets.getDetail(marketindex).getName());
+        setContent_show(Markets.getDetail(marketindex).getTrain());
+    }
+
     public void setImg_show(Integer img)
     {
         img_show.setImageResource(img);
@@ -62,6 +74,7 @@ public class RecommenedMenuGroup extends FrameLayout {
         img_show = findViewById(R.id.recommened_img_show);
         header_show = findViewById(R.id.recommened_header_show);
         content_show = findViewById(R.id.recommened_content_show);
+        img_show.setOnClickListener(listener);
     }
     private void InitInflate() {
         inflate(getContext(), R.layout.recommened_menu_group,this);
@@ -70,7 +83,9 @@ public class RecommenedMenuGroup extends FrameLayout {
     View.OnClickListener listener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            Intent intent = new Intent(getContext(), MenuViewActivity.class);
+            intent.putExtra("marketIndex",marketindex);
+            getContext().startActivity(intent);
         }
     };
 }

@@ -50,9 +50,9 @@
 
                         <include layout="@layout/bts_sukrumvit" />
 
-                        <include layout="@layout/mrt_blue"/>
+                        <include layout="@layout/mrt_blue" />
 
-                        <include layout="@layout/mrt_violet"/>
+                        <include layout="@layout/mrt_violet" />
                     </FrameLayout>
 
                     <View
@@ -64,5 +64,8 @@
         </ScrollView>
     </LinearLayout>
 
-    <include layout="@layout/nevigation_bottom" />
+    <com.inspiretail.anint.eatstation.ViewGroups.NevigationButtomGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
 </FrameLayout>

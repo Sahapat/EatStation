@@ -5,14 +5,18 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font;
 import com.inspiretail.anint.eatstation.Markets;
 import com.inspiretail.anint.eatstation.R;
+import com.willy.ratingbar.BaseRatingBar;
 import com.willy.ratingbar.ScaleRatingBar;
 
 public class ViewMenuGroup extends FrameLayout {
@@ -28,8 +32,10 @@ public class ViewMenuGroup extends FrameLayout {
     private TextView_rsu_font txt_money;
     private TextView_rsu_font txt_comment;
     private EditText edt_comment;
+    private LinearLayout view_menu_detail;
+    private ImageView btn_close;
 
-    private int marketIndex;
+    public int marketIndex;
 
     public ViewMenuGroup(@NonNull Context context) {
         super(context);
@@ -72,7 +78,9 @@ public class ViewMenuGroup extends FrameLayout {
         txt_time = findViewById(R.id.txt_time_name);
         txt_money = findViewById(R.id.txt_money_name);
         txt_comment = findViewById(R.id.txt_comment);
-        marketIndex = 0;
+        btn_close = findViewById(R.id.btn_close);
+        view_menu_detail = findViewById(R.id.view_menu_detail);
+        rate_rating.setOnRatingChangeListener(rateChangeListener);
         updateView();
     }
     public void switchLike()
@@ -80,17 +88,44 @@ public class ViewMenuGroup extends FrameLayout {
         if(Markets.getDetail(marketIndex).isLike())
         {
             Markets.getDetail(marketIndex).setLike(false);
+            updateView();
         }
         else
         {
             Markets.getDetail(marketIndex).setLike(true);
+            updateView();
         }
+    }
+    public void statusClose(boolean status)
+    {
+        if(status)
+        {
+            btn_close.setVisibility(VISIBLE);
+        }
+        else
+        {
+            btn_close.setVisibility(INVISIBLE);
+        }
+    }
+    public void setClickListener(View.OnClickListener listener)
+    {
+        btn_heart.setOnClickListener(listener);
+        btn_comment.setOnClickListener(listener);
+        view_menu_detail.setOnClickListener(listener);
+        btn_close.setOnClickListener(listener);
+
+    }
+    public void setComment(String txt,boolean status)
+    {
+        Markets.getDetail(marketIndex).setIsComment(status);
+        Markets.getDetail(marketIndex).setComment(txt);
+        updateView();
     }
     public void updateView()
     {
         img_show.setImageResource(Markets.getDetail(marketIndex).getImage());
         rate_rating.setRating(Markets.getDetail(marketIndex).getRate());
-        txt_market.setText(Markets.getDetail(marketIndex).getName());
+        txt_market.setText(Markets.getDetail(marketIndex).getResultName());
         txt_train.setText(Markets.getDetail(marketIndex).getTrain());
         txt_location.setText(Markets.getDetail(marketIndex).getTxt_location());
         txt_time.setText(Markets.getDetail(marketIndex).getTime());
@@ -118,4 +153,11 @@ public class ViewMenuGroup extends FrameLayout {
             btn_heart.setImageResource((R.drawable.ic_heart));
         }
     }
+    ScaleRatingBar.OnRatingChangeListener rateChangeListener = new ScaleRatingBar.OnRatingChangeListener() {
+        @Override
+        public void onRatingChange(BaseRatingBar baseRatingBar, float v) {
+            Markets.getDetail(marketIndex).setRate(v);
+            updateView();
+        }
+    };
 }

@@ -1,7 +1,6 @@
 package com.inspiretail.anint.eatstation.Activity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +9,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 
-import com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font;
+import com.inspiretail.anint.eatstation.Markets;
 import com.inspiretail.anint.eatstation.R;
 import com.inspiretail.anint.eatstation.ViewGroups.RecommenedMenuGroup;
 import com.inspiretail.anint.eatstation.ViewGroups.ToolbarGroup;
 
-public class NortificationActivity extends AppCompatActivity {
+public class StationActivity extends AppCompatActivity {
 
     private ImageButton btn_profile;
     private ImageButton btn_Search;
@@ -23,88 +22,66 @@ public class NortificationActivity extends AppCompatActivity {
     private ImageView img_eatStation;
     private ToolbarGroup toolbar;
     private LinearLayout navigation_bottom;
-    private TextView_rsu_font txt_nearby;
-    private TextView_rsu_font txt_like;
-    private boolean isSelectNearby;
     private RecommenedMenuGroup recommenedMenuGroup1;
     private RecommenedMenuGroup recommenedMenuGroup2;
     private RecommenedMenuGroup recommenedMenuGroup3;
-    private RecommenedMenuGroup recommenedMenuGroup4;
+
+    private int[] marketIndexs = new int[3];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nortification);
+        setContentView(R.layout.activity_station);
 
+        Intent intent = getIntent();
+        marketIndexs = intent.getIntArrayExtra("marketIndexs");
         InitInstance();
+        setClickListener();
     }
 
+    private void setClickListener() {
+        actionbar_search.setOnCloseListener(onCloseListener);
+        btn_Search.setOnClickListener(itemClick);
+        recommenedMenuGroup1.setOnClickListener(itemClick);
+        recommenedMenuGroup2.setOnClickListener(itemClick);
+        recommenedMenuGroup3.setOnClickListener(itemClick);
+    }
+    private void setViewContent() {
+        img_eatStation.setVisibility(View.INVISIBLE);
+        toolbar.setMainText(Markets.getDetail(marketIndexs[0]).getTrain());
+        recommenedMenuGroup1.setMarketindex(0);
+        recommenedMenuGroup2.setMarketindex(1);
+        recommenedMenuGroup3.setMarketindex(2);
+    }
     private void InitInstance() {
-        txt_nearby = findViewById(R.id.txt_nearby);
-        txt_like = findViewById(R.id.txt_like);
-        navigation_bottom = findViewById(R.id.navigation_bottom);
         toolbar = findViewById(R.id.app_toolbar);
         btn_profile = toolbar.findViewById(R.id.btn_left);
         img_eatStation = findViewById(R.id.img_eatstation);
         btn_Search = findViewById(R.id.btn_right);
         actionbar_search = findViewById(R.id.toolbar_search);
+        navigation_bottom = findViewById(R.id.navigation_bottom);
         recommenedMenuGroup1 = findViewById(R.id.menu_group1);
         recommenedMenuGroup2 = findViewById(R.id.menu_group2);
         recommenedMenuGroup3 = findViewById(R.id.menu_group3);
-        recommenedMenuGroup4 = findViewById(R.id.menu_group4);
-        updateSelect();
-        InitClick();
+
         setViewContent();
-    }
-
-    private void setViewContent() {
-        toolbar.setMainText(getString(R.string.toolbar_name_none));
-    }
-
-    private void InitClick() {
-        btn_Search.setOnClickListener(itemClick);
-        actionbar_search.setOnCloseListener(onCloseListener);
-        txt_nearby.setOnClickListener(itemClick);
-        txt_like.setOnClickListener(itemClick);
-    }
-    private void updateSelect()
-    {
-        if(isSelectNearby)
-        {
-            txt_nearby.setBackgroundColor(Color.WHITE);
-            txt_like.setBackgroundColor(Color.TRANSPARENT);
-            recommenedMenuGroup1.setMarketindex(0);
-            recommenedMenuGroup2.setMarketindex(1);
-            recommenedMenuGroup3.setMarketindex(2);
-            recommenedMenuGroup4.setMarketindex(3);
-        }
-        else
-        {
-            txt_nearby.setBackgroundColor(Color.TRANSPARENT);
-            txt_like.setBackgroundColor(Color.WHITE);
-            recommenedMenuGroup1.setMarketindex(4);
-            recommenedMenuGroup2.setMarketindex(5);
-            recommenedMenuGroup3.setMarketindex(6);
-            recommenedMenuGroup4.setMarketindex(7);
-        }
     }
     private void setOpenSearchBar(boolean status) {
         if (status) {
             btn_profile.setVisibility(View.INVISIBLE);
             btn_Search.setVisibility(View.INVISIBLE);
-            img_eatStation.setVisibility(View.INVISIBLE);
             actionbar_search.setVisibility(View.VISIBLE);
+            navigation_bottom.setVisibility(View.INVISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_none));
             actionbar_search.setIconified(false);
-            navigation_bottom.setVisibility(View.INVISIBLE);
         } else {
             btn_profile.setVisibility(View.VISIBLE);
             btn_Search.setVisibility(View.VISIBLE);
-            img_eatStation.setVisibility(View.VISIBLE);
-            toolbar.setMainText(getString(R.string.toolbar_name_none));
-            actionbar_search.setVisibility(View.INVISIBLE);
             navigation_bottom.setVisibility(View.VISIBLE);
+            toolbar.setMainText(Markets.getDetail(marketIndexs[0]).getTrain());
+            actionbar_search.setVisibility(View.INVISIBLE);
         }
     }
+
 
     SearchView.OnCloseListener onCloseListener = new SearchView.OnCloseListener() {
         @Override
@@ -119,14 +96,6 @@ public class NortificationActivity extends AppCompatActivity {
             switch (v.getId()) {
                 case R.id.btn_right:
                     setOpenSearchBar(true);
-                    break;
-                case R.id.txt_nearby:
-                    isSelectNearby = true;
-                    updateSelect();
-                    break;
-                case R.id.txt_like:
-                    isSelectNearby = false;
-                    updateSelect();
                     break;
             }
         }

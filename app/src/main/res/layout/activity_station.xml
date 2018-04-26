@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DishActivity">
+    tools:context=".Activity.StationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,32 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="true">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.inspiretail.anint.eatstation.ViewGroups.TextSelectorBarGroup
-                    android:id="@+id/txt_selected_group"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <com.inspiretail.anint.eatstation.CustomViews.TextView_rsu_font
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Nearby"
-                        android:layout_marginLeft="16dp"
-                        android:textSize="32sp"
-                        android:layout_marginTop="70dp"
-                        android:textColor="@color/text_bold_black"
-                        app:font_style="bold"
-                        />
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -74,40 +53,16 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1" />
 
-                        <com.inspiretail.anint.eatstation.ViewGroups.RecommenedMenuGroup
-                            android:id="@+id/menu_group4"
+                        <View
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.inspiretail.anint.eatstation.ViewGroups.RecommenedMenuGroup
-                            android:id="@+id/menu_group5"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
-
-                        <com.inspiretail.anint.eatstation.ViewGroups.RecommenedMenuGroup
-                            android:id="@+id/menu_group6"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
-                    </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/actionbarsize"
-                        android:background="@android:color/transparent" />
                 </LinearLayout>
-            </FrameLayout>
         </ScrollView>
     </LinearLayout>
     <com.inspiretail.anint.eatstation.ViewGroups.NevigationButtomGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        />
+        android:layout_gravity="bottom"/>
 </FrameLayout>

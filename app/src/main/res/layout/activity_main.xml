@@ -76,6 +76,9 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
-    <include layout="@layout/nevigation_bottom" />
+    <com.inspiretail.anint.eatstation.ViewGroups.NevigationButtomGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        />
 </FrameLayout>

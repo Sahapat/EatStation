@@ -8,6 +8,8 @@
     android:layout_marginLeft="35dp"
     android:layout_marginRight="35dp"
     android:orientation="vertical"
+    android:clickable="true"
+    android:id="@+id/view_menu_detail"
     tools:showIn="@layout/view_menu">
 
     <LinearLayout

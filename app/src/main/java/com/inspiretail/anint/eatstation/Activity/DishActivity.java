@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 
 import com.inspiretail.anint.eatstation.R;
+import com.inspiretail.anint.eatstation.ViewGroups.RecommenedMenuGroup;
 import com.inspiretail.anint.eatstation.ViewGroups.ToolbarGroup;
 
 public class DishActivity extends AppCompatActivity {
@@ -18,14 +20,14 @@ public class DishActivity extends AppCompatActivity {
     private SearchView actionbar_search;
     private ImageView img_eatStation;
     private ToolbarGroup toolbar;
+    private RecommenedMenuGroup recommenedMenuGroup1;
+    private RecommenedMenuGroup recommenedMenuGroup2;
+    private RecommenedMenuGroup recommenedMenuGroup3;
+    private RecommenedMenuGroup recommenedMenuGroup4;
+    private RecommenedMenuGroup recommenedMenuGroup5;
+    private RecommenedMenuGroup recommenedMenuGroup6;
 
-    private Integer home_resource_active = R.drawable.ic_dish_active;
-    private ImageButton btn_home;
-    private ImageButton btn_nortification;
-    private ImageButton btn_train;
-    private ImageButton btn_dish;
-
-    private Intent intent;
+    private LinearLayout navigation_bottom;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,26 +42,31 @@ public class DishActivity extends AppCompatActivity {
         img_eatStation = findViewById(R.id.img_eatstation);
         btn_Search = findViewById(R.id.btn_right);
         actionbar_search = findViewById(R.id.toolbar_search);
-        btn_home = findViewById(R.id.btn_home);
-        btn_nortification = findViewById(R.id.btn_nortification);
-        btn_train = findViewById(R.id.btn_train);
-        btn_dish = findViewById(R.id.btn_dish);
+        navigation_bottom = findViewById(R.id.navigation_bottom);
+        recommenedMenuGroup1 = findViewById(R.id.menu_group1);
+        recommenedMenuGroup2 = findViewById(R.id.menu_group2);
+        recommenedMenuGroup3 = findViewById(R.id.menu_group3);
+        recommenedMenuGroup4 = findViewById(R.id.menu_group4);
+        recommenedMenuGroup5 = findViewById(R.id.menu_group5);
+        recommenedMenuGroup6 = findViewById(R.id.menu_group6);
         InitClick();
         setViewContent();
     }
 
     private void setViewContent() {
-        btn_dish.setImageResource(home_resource_active);
         img_eatStation.setVisibility(View.INVISIBLE);
         toolbar.setMainText(getString(R.string.toolbar_name_restuarant));
+        recommenedMenuGroup1.setMarketindex(5);
+        recommenedMenuGroup2.setMarketindex(6);
+        recommenedMenuGroup3.setMarketindex(3);
+        recommenedMenuGroup4.setMarketindex(4);
+        recommenedMenuGroup5.setMarketindex(8);
+        recommenedMenuGroup6.setMarketindex(9);
     }
 
     private void InitClick() {
         btn_Search.setOnClickListener(itemClick);
         actionbar_search.setOnCloseListener(onCloseListener);
-        btn_train.setOnClickListener(itemClick);
-        btn_nortification.setOnClickListener(itemClick);
-        btn_home.setOnClickListener(itemClick);
     }
 
     private void setOpenSearchBar(boolean status) {
@@ -69,11 +76,13 @@ public class DishActivity extends AppCompatActivity {
             actionbar_search.setVisibility(View.VISIBLE);
             toolbar.setMainText("");
             actionbar_search.setIconified(false);
+            navigation_bottom.setVisibility(View.INVISIBLE);
         } else {
             btn_profile.setVisibility(View.VISIBLE);
             btn_Search.setVisibility(View.VISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_restuarant));
             actionbar_search.setVisibility(View.INVISIBLE);
+            navigation_bottom.setVisibility(View.VISIBLE);
         }
     }
 
@@ -90,21 +99,6 @@ public class DishActivity extends AppCompatActivity {
             switch (v.getId()) {
                 case R.id.btn_right:
                     setOpenSearchBar(true);
-                    break;
-                case R.id.btn_home:
-                    intent = new Intent(DishActivity.this,MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_nortification:
-                    intent = new Intent(DishActivity.this,NortificationActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
-                    break;
-                case R.id.btn_train:
-                    intent = new Intent(DishActivity.this,TrainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                    startActivity(intent);
                     break;
             }
         }
