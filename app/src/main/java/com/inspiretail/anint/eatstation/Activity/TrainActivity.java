@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.inspiretail.anint.eatstation.R;
 import com.inspiretail.anint.eatstation.ViewGroups.TextSelectorBarGroup;
@@ -24,14 +25,11 @@ public class TrainActivity extends AppCompatActivity {
     private LinearLayout navigation_bottom;
 
     private LinearLayout fragment_srilom;
-    private int srilom_height;
     private LinearLayout fragment_sukrumvit;
-    private int sukrumvit_height;
     private LinearLayout fragement_mrt_blue;
-    private int mrt_blue_height;
     private LinearLayout fragment_mrt_violet;
-    private int mrt_violet_height;
     private FrameLayout container;
+    private LinearLayout container_out;
 
     private ImageButton btn_saphan_buf;
     private ImageButton btn_mo_chit;
@@ -78,14 +76,10 @@ public class TrainActivity extends AppCompatActivity {
         btn_petchburi = findViewById(R.id.btn_phetchaburi);
         btn_lard_pao = findViewById(R.id.btn_lat_phrao);
         btn_bang_khlong_bang_phai = findViewById(R.id.btn_khlong_bang_phai);
+        container_out = findViewById(R.id.container_out);
         container = findViewById(R.id.container);
         textSelectorBarGroup = findViewById(R.id.txt_selected_group);
         textSelectorBarGroup.bringToFront();
-        srilom_height = fragment_srilom.getMeasuredHeight();
-        sukrumvit_height = fragment_sukrumvit.getMeasuredHeight();
-        mrt_blue_height = fragement_mrt_blue.getMeasuredHeight();
-        mrt_violet_height = fragment_mrt_violet.getMeasuredHeight();
-
         InitClick();
         setViewContent();
     }
@@ -100,6 +94,10 @@ public class TrainActivity extends AppCompatActivity {
             fragment_sukrumvit.setVisibility(View.INVISIBLE);
             fragement_mrt_blue.setVisibility(View.INVISIBLE);
             fragment_mrt_violet.setVisibility(View.INVISIBLE);
+            container.getLayoutParams().height = dpToPx(1100);
+            container.requestLayout();
+            container_out.requestLayout();
+
         } else if (selected == getString(R.string.station_bts_sukrumvit)) {
             textSelectorBarGroup.setTxt_frame1(getString(R.string.station_bts_sukrumvit));
             textSelectorBarGroup.setTxt_frame2(getString(R.string.station_bts_silom));
@@ -109,6 +107,9 @@ public class TrainActivity extends AppCompatActivity {
             fragment_sukrumvit.setVisibility(View.VISIBLE);
             fragement_mrt_blue.setVisibility(View.INVISIBLE);
             fragment_mrt_violet.setVisibility(View.INVISIBLE);
+            container.getLayoutParams().height = dpToPx(2000);
+            container.requestLayout();
+            container_out.requestLayout();
         } else if (selected == getString(R.string.station_mrt_blue)) {
             textSelectorBarGroup.setTxt_frame1(getString(R.string.station_mrt_blue));
             textSelectorBarGroup.setTxt_frame2(getString(R.string.station_bts_sukrumvit));
@@ -118,6 +119,9 @@ public class TrainActivity extends AppCompatActivity {
             fragment_sukrumvit.setVisibility(View.INVISIBLE);
             fragement_mrt_blue.setVisibility(View.VISIBLE);
             fragment_mrt_violet.setVisibility(View.INVISIBLE);
+            container.getLayoutParams().height = dpToPx(1820);
+            container.requestLayout();
+            container_out.requestLayout();
         } else if (selected == getString(R.string.station_mrt_violet)) {
             textSelectorBarGroup.setTxt_frame1(getString(R.string.station_mrt_violet));
             textSelectorBarGroup.setTxt_frame2(getString(R.string.station_bts_sukrumvit));
@@ -127,6 +131,9 @@ public class TrainActivity extends AppCompatActivity {
             fragment_sukrumvit.setVisibility(View.INVISIBLE);
             fragement_mrt_blue.setVisibility(View.INVISIBLE);
             fragment_mrt_violet.setVisibility(View.VISIBLE);
+            container.getLayoutParams().height = dpToPx(1520);
+            container.requestLayout();
+            container_out.requestLayout();
         }
     }
 
@@ -280,4 +287,10 @@ public class TrainActivity extends AppCompatActivity {
             }
         }
     };
+    public int dpToPx(int dp) {
+        float density = getResources()
+                .getDisplayMetrics()
+                .density;
+        return Math.round((float) dp * density);
+    }
 }

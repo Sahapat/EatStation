@@ -48,9 +48,9 @@ public class StationActivity extends AppCompatActivity {
     private void setViewContent() {
         img_eatStation.setVisibility(View.INVISIBLE);
         toolbar.setMainText(Markets.getDetail(marketIndexs[0]).getTrain());
-        recommenedMenuGroup1.setMarketindex(0);
-        recommenedMenuGroup2.setMarketindex(1);
-        recommenedMenuGroup3.setMarketindex(2);
+        recommenedMenuGroup1.setMarketindex(marketIndexs[0]);
+        recommenedMenuGroup2.setMarketindex(marketIndexs[1]);
+        recommenedMenuGroup3.setMarketindex(marketIndexs[2]);
     }
     private void InitInstance() {
         toolbar = findViewById(R.id.app_toolbar);

@@ -75,12 +75,15 @@ public class NevigationButtomGroup extends FrameLayout {
         {
             btn_nortification.setImageResource(R.drawable.ic_nortification_active);
         }
-        else if(onClassName == DishActivity.class.getName() || onClassName == StationActivity.class.getName())
+        else if(onClassName == DishActivity.class.getName())
         {
             btn_dish.setImageResource(R.drawable.ic_dish_active);
         }
         else if(onClassName == TrainActivity.class.getName())
         {
+            btn_train.setImageResource(R.drawable.ic_train_active);
+        }
+        else{
             btn_train.setImageResource(R.drawable.ic_train_active);
         }
     }

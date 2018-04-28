@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EatStation</string>
     <string name="searchview_hint">Search</string>
-    <string name="layout_recommened_text">Recommened</string>
+    <string name="layout_recommened_text">Recommend</string>
     <string name="menu_koi_the_thailand">Koi The\' Thailand</string>
     <string name="menu_bella_cas">Bella Cas</string>
     <string name="menu_yentafour">เย็นตาโฟทรงเครื่อง</string>
@@ -26,6 +26,7 @@
     <string name="toolbar_name_profile">Profile</string>
     <string name="toolbar_name_restuarant">Restuarant</string>
     <string name="toolbar_name_station">Station</string>
+    <string name="toolbar_name_notification">Notification</string>
     <string name="app_eatstation_name">EAT STATION</string>
     <string name="btn_signin_text">Sign in</string>
     <string name="sign_in_with_facebook">sign in with facebook</string>

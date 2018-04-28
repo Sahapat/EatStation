@@ -32,6 +32,7 @@
                     android:layout_gravity="top" />
 
                 <LinearLayout
+                    android:id="@+id/container_out"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">

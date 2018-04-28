@@ -57,7 +57,8 @@ public class NortificationActivity extends AppCompatActivity {
     }
 
     private void setViewContent() {
-        toolbar.setMainText(getString(R.string.toolbar_name_none));
+        toolbar.setMainText(getString(R.string.toolbar_name_notification));
+        img_eatStation.setVisibility(View.INVISIBLE);
     }
 
     private void InitClick() {
@@ -91,7 +92,6 @@ public class NortificationActivity extends AppCompatActivity {
         if (status) {
             btn_profile.setVisibility(View.INVISIBLE);
             btn_Search.setVisibility(View.INVISIBLE);
-            img_eatStation.setVisibility(View.INVISIBLE);
             actionbar_search.setVisibility(View.VISIBLE);
             toolbar.setMainText(getString(R.string.toolbar_name_none));
             actionbar_search.setIconified(false);
@@ -99,8 +99,7 @@ public class NortificationActivity extends AppCompatActivity {
         } else {
             btn_profile.setVisibility(View.VISIBLE);
             btn_Search.setVisibility(View.VISIBLE);
-            img_eatStation.setVisibility(View.VISIBLE);
-            toolbar.setMainText(getString(R.string.toolbar_name_none));
+            toolbar.setMainText(getString(R.string.toolbar_name_notification));
             actionbar_search.setVisibility(View.INVISIBLE);
             navigation_bottom.setVisibility(View.VISIBLE);
         }
