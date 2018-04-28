@@ -42,6 +42,8 @@ public class TrainActivity extends AppCompatActivity {
     private ImageButton btn_bang_sue;
     private ImageButton btn_petchburi;
     private ImageButton btn_lard_pao;
+    private ImageButton btn_bang_yai;
+    private ImageButton btn_bridge;
 
     private ImageButton btn_bang_khlong_bang_phai;
 
@@ -69,6 +71,8 @@ public class TrainActivity extends AppCompatActivity {
         btn_saphan_buf = findViewById(R.id.btn_saphan_khwai);
         btn_mo_chit = findViewById(R.id.btn_mo_chit);
         btn_ari = findViewById(R.id.btn_ari);
+        btn_bang_yai = findViewById(R.id.btn_talad_bang_yai);
+        btn_bridge = findViewById(R.id.btn_phra_nong_klao_bridge);
         btn_nonthri = findViewById(R.id.btn_chong_nonsi);
         btn_saradang = findViewById(R.id.btn_sala_dang);
         btn_nation_staduim = findViewById(R.id.btn_national_stadium);
@@ -83,6 +87,7 @@ public class TrainActivity extends AppCompatActivity {
         InitClick();
         setViewContent();
     }
+
     private void setSelectedText(String selected) {
 
         if (selected == getString(R.string.station_bts_silom)) {
@@ -157,6 +162,8 @@ public class TrainActivity extends AppCompatActivity {
         btn_petchburi.setOnClickListener(itemClick);
         btn_lard_pao.setOnClickListener(itemClick);
         btn_bang_khlong_bang_phai.setOnClickListener(itemClick);
+        btn_bang_yai.setOnClickListener(itemClick);
+        btn_bridge.setOnClickListener(itemClick);
     }
 
     private void setOpenSearchBar(boolean status) {
@@ -225,68 +232,81 @@ public class TrainActivity extends AppCompatActivity {
                     }
                     break;
                 case R.id.btn_saphan_khwai:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs =new int[]{0,1,2};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{0, 1, 2};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_mo_chit:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{3,4,5};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{3, 4, 5};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_ari:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{6,7,8};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{6, 7, 8};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_chong_nonsi:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{9,10,11};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{9, 10, 11};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_sala_dang:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{12,13,14};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{12, 13, 14};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_national_stadium:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{15,16,17};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{15, 16, 17};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_bang_sue:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{27,28,29};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{27, 28, 29};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_phetchaburi:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{21,22,23};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{21, 22, 23};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_lat_phrao:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{24,25,26};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{24, 25, 26};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
                 case R.id.btn_khlong_bang_phai:
-                    intent = new Intent(TrainActivity.this,StationActivity.class);
-                    marketIndexs = new int[]{18,19,20};
-                    intent.putExtra("marketIndexs",marketIndexs);
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{18, 19, 20};
+                    intent.putExtra("marketIndexs", marketIndexs);
+                    startActivity(intent);
+                    break;
+                case R.id.btn_talad_bang_yai:
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{30, 31, 32};
+                    intent.putExtra("marketIndexs", marketIndexs);
+                    startActivity(intent);
+                    break;
+                case R.id.btn_phra_nong_klao_bridge:
+                    intent = new Intent(TrainActivity.this, StationActivity.class);
+                    marketIndexs = new int[]{33, 34, 35};
+                    intent.putExtra("marketIndexs", marketIndexs);
                     startActivity(intent);
                     break;
             }
         }
     };
+
     public int dpToPx(int dp) {
         float density = getResources()
                 .getDisplayMetrics()
