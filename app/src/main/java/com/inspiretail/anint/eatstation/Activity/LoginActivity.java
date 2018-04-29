@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     break;
                 case R.id.tv_lost:
                     intent = new Intent(LoginActivity.this,ForgotPasswordActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
                 case R.id.tv_signup:

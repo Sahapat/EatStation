@@ -34,7 +34,7 @@ public class NortificationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nortification);
-
+        isSelectNearby = true;
         InitInstance();
     }
 
@@ -71,8 +71,8 @@ public class NortificationActivity extends AppCompatActivity {
     {
         if(isSelectNearby)
         {
-            txt_nearby.setBackgroundColor(Color.WHITE);
-            txt_like.setBackgroundColor(Color.TRANSPARENT);
+            txt_nearby.setBackgroundColor(Color.TRANSPARENT);
+            txt_like.setBackgroundColor(Color.WHITE);
             recommenedMenuGroup1.setMarketindex(0);
             recommenedMenuGroup2.setMarketindex(1);
             recommenedMenuGroup3.setMarketindex(2);
@@ -80,8 +80,8 @@ public class NortificationActivity extends AppCompatActivity {
         }
         else
         {
-            txt_nearby.setBackgroundColor(Color.TRANSPARENT);
-            txt_like.setBackgroundColor(Color.WHITE);
+            txt_nearby.setBackgroundColor(Color.WHITE);
+            txt_like.setBackgroundColor(Color.TRANSPARENT);
             recommenedMenuGroup1.setMarketindex(4);
             recommenedMenuGroup2.setMarketindex(5);
             recommenedMenuGroup3.setMarketindex(6);

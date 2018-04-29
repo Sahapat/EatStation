@@ -70,7 +70,8 @@ public class ProfileActivity extends AppCompatActivity {
                     finish();
                     break;
                 case R.id.btn_right:
-                    Intent intent = new Intent(ProfileActivity.this,NewPasswordActivity.class);
+                    Intent intent = new Intent(ProfileActivity.this,ForgotPasswordActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     break;
             }
